@@ -110,6 +110,9 @@ header{
     width: 20%;
     border-radius: 50%;
 }
+#profilePicture:hover{
+    box-shadow: 3px 3px 3px grey;
+}
 #socialIcon{
     color: white;
     font-size: xx-large;
