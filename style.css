@@ -41,32 +41,32 @@
     display: none;
 }
 
-section, .nav, footer{
+section, footer{
     margin-left: 20%;
     margin-right: 20%;
 }
 nav{
-    width: 60%;
+    width: 100%;
 }
-
+.about_content,footer{
+    font-size: 14px;
+}
 
 .dev_skill, .va_skill{
     border: 1px solid #96f1a2;
     /* height: 350px; */
 }
+
 }
 @media only screen and (max-width: 767px) {
     /* For phones */
     nav{
-        height: 55px;
-       width: 100%;
+        width: 100%;
         text-align: center;
         background-color: #0c0c0c;
-        /* border-radius: 200px; */
         position: fixed;
         top: 0;
         left: 0;
-        /* box-shadow: 0px 0px 0px 1px#96f1a2; */
     }
     .navIcon{
         display: none;
@@ -231,6 +231,9 @@ section{
     transition: all 1s ease-in-out;
     animation: sam 8s ease-in-out infinite;
     box-shadow: 0px 2px 2px 2px #96f1a2;
+}
+.samuelnchege a{
+    text-decoration: none;
 }
 
 @keyframes sam {
@@ -404,7 +407,7 @@ footer{
     box-shadow: 0px 0px 0px 1px#96f1a2;
     color: #96f1a2;
     padding: 20px;
-    font-size: 10px;
+    font-size: 12px;
 }
 #copyright{
     text-decoration: none;
