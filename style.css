@@ -42,14 +42,14 @@
 }
 
 section, footer{
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 nav{
     width: 100%;
 }
 .about_content,footer{
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .dev_skill, .va_skill{
@@ -407,7 +407,7 @@ footer{
     box-shadow: 0px 0px 0px 1px#96f1a2;
     color: #96f1a2;
     padding: 20px;
-    font-size: 12px;
+    font-size: 10px;
 }
 #copyright{
     text-decoration: none;
