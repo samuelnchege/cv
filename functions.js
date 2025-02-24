@@ -64,6 +64,5 @@ function sendEmail() {
   };
   emailjs
     .send("service_3yvwauj", "template_0zgyr9o", emailDetails)
-    .then("Message sent Successfully");
+    .then(alert("Message sent Successfully"));
 }
-j;
