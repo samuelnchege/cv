@@ -370,7 +370,7 @@ input[type=text], input[type=email], textarea {
   }
   
 
-  input[type=submit] {
+  .submit-btn {
     background-color: #96f1a2;
     color: black;
     padding: 12px 20px;
@@ -378,9 +378,10 @@ input[type=text], input[type=email], textarea {
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
+    transition: 0.3s;
   }
   
-  input[type=submit]:hover {
+  .submit-btn:hover {
     background-color: green;
     color: white;
   }

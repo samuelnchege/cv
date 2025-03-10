@@ -13,12 +13,12 @@
 
 
 // Get all needed elements from the DOM
-const contactForm = document.querySelector('#contact-form');
-const submitBtn = document.querySelector('.submit-btn');
-const fnameInput = document.querySelector('#fname');
-const lnameInput = document.querySelector('#lname');
-const emailInput = document.querySelector('#email');
-const messageInput = document.querySelector('#message');
+const contactForm = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn')
+const fnameInput = document.getElementById('fname');
+const lnameInput = document.getElementById('lname');
+const emailInput = document.getElementById('email');
+const messageInput = document.getElementById('message');
 
 // Get needed data from EmailJS
 const publicKey = "zQ8Ivg2boi-EQjem-";
@@ -29,14 +29,14 @@ const templateID = "template_0zgyr9o";
 emailjs.init(publicKey);
 
 // Addsubmit event to the form
-contactForm.addEventListener("submit", e =>{
+contactForm.addEventListener('submit', e =>{
   // prevent form default behaviour
   e.preventDefault();
   // Changebutton text
   submitBtn.innerText  = "Just A Moment...";
   // Get all input value fields
   const inputFields = {
-    name: fnameInput.value,
+    name: `${fnameInput.value} ${lnameInput.value}`,
     email: emailInput.value,
     message: messageInput.value
   }

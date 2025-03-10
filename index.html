@@ -11,9 +11,6 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
-    <script
-      src="email.js"
-    ></script>
   </head>
   <body>
     <!-- (NAV) NAVIGATION BAR START -->
@@ -199,7 +196,7 @@
 
     <section class="contact">
       <h1 style="text-align: center" id="contact">Contact</h1>
-      <form action="" method="" id="contact-form">
+      <form id="contact-form">
         <label for="fname">First Name</label>
         <input
           type="text"
@@ -228,8 +225,8 @@
           style="height: 200px"
           required
         ></textarea>
-
-        <input type="submit" value="Submit" class="submit-btn"/>
+        <button type="submit" class="submit-btn" id="submit-btn">Submit</button>
+      
       </form>
     </section>
     <!-- Contact Section Ends -->
@@ -240,7 +237,9 @@
       <a href="#" id="copyright">Samuel Nchege</a>
     </footer>
     <!-- Footer Section Ends -->
-
+<script
+src="email.js"
+></script>
     <script src="functions.js"></script>
     <script src="nav.js"></script>
   </body>
