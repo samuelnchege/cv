@@ -47,6 +47,7 @@ contactForm.addEventListener("submit", e =>{
     submitBtn.innerText = "Message sent Successfully";
     // Clear out all input fields
     fnameInput.value = "";
+    lnameInput.value = "";
     emailInput.value = "";
     messageInput.value = "";
   }, (error) =>{
