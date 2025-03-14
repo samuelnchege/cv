@@ -53,3 +53,13 @@ function StartWriter(i) {
 setTimeout(function () {
   StartWriter(0);
 }, 100);
+
+// Downloading my cv pdf format document
+function downloadPdf() {
+  var link = document.createElement('a');
+  link.href = 'Samuel Anyaja Nchege_cv.pdf';
+  link.download = 'Samuel Anyaja Nchege_cv.pdf';
+  link.click();
+  alert(`CV - Download successfull!
+Please view in downloads(Samuel Anyaja Nchege_cv.pdf)`)
+}
