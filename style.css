@@ -1,264 +1,89 @@
-/* Responsive CSS OPEN */
-* {
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
 }
 
-.row{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+body {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  background-color: #020617;
+  color: #e2e8f0;
 }
 
-[class*="col-"] {
-    /* float: left; */
-    padding: 15px;
-   
+#profilePicture {
+  transition: transform 0.7s ease, box-shadow 0.7s ease;
 }
 
-
-/* For mobile phones: */
-/* [class*="col-"] {
-  width: 100%;
-} */
-
-
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-
-  .sm_navIcon{
-    display: none;
+#profilePicture:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 35px 90px rgba(20, 184, 166, 0.3);
 }
 
-section, footer{
-    margin-left: 10%;
-    margin-right: 10%;
-}
-nav{
-    width: 100%;
-}
-.about_content,footer{
-    font-size: 12px;
+#typewriter {
+  font-weight: 600;
+  color: #34d399;
+  min-height: 1.8rem;
 }
 
-.dev_skill, .va_skill{
-    border: 1px solid #96f1a2;
-    /* height: 350px; */
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2rem;
+  background: #34d399;
+  animation: blink 1s infinite;
+  vertical-align: middle;
 }
 
-}
-@media only screen and (max-width: 767px) {
-    /* For phones */
-    nav{
-        width: 100%;
-        text-align: center;
-        background-color: #0c0c0c;
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-    .navIcon{
-        display: none;
-    }
-    .logo{
-        position: absolute;
-        left: 5px;
-    }
-    .sm_navIcon{
-        display: block;
-        position: absolute;
-        right: 5px;
-    }
-    section{
-       margin: 0;
-    }
-
-    .skill{
-        display: block;
-    }
-    .dev_skill, .va_skill{
-        border: 1px solid #96f1a2;
-        /* height: 350px; */
-        width: 100%;
-        margin-bottom: 10px;
-        text-align: center;
-    }
-    .dev_skill{
-        border-bottom: none;
-    }
-    .va_skill{
-        border-top: none;
-    }
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
   }
-/* RESPONSIVE CSS CLOSED */
-
-body{
-    background-color: black;
-    font-family: monospace;
-    font-size: 14px;
+  50% {
+    opacity: 0;
+  }
 }
 
-/* (NAV) NAVIGATION BAR START */
-.nav{
-    height: 55px;
-    text-align: center;
-    background-color: #0c0c0c;
-    /* border-radius: 200px; */
-    box-shadow: 0px 0px 0px 1px#96f1a2;
-    position: fixed;
-    top: 0;
-}
-
-.logo{
-    padding: 0px;
-}
-#logo{
-    width: 80px;
-}
-.sm_navIcon a{
-    font-size: 20px;
-}
-.sm_navIcon a{
-    color: #96f1a2;
-    text-decoration: none;
-}
-.navIcon{
-    text-align: right;
-}
-.navIcon span{
-    color: green;
-}
-.navIcon a{
-    /* font-size: 20px; */
-    text-decoration: none;
-   padding: 15px;
-   color: #96f1a2;
-}
-.navIcon a:hover, .sm_navIcon a:hover{
-    color: green;
-}
-/* (NAV) NAVIGATION BAR ENDS */
-
- #home, #about, #skills, #projects, #contact{
-    padding-top: 64px;
-}
-
-
-/* Menu NAVIGATION ON SMALL SCREEN */
-
-/* The Overlay (background) */
 .overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */  
-    height: 0;
-    width: 100%;
-    position: fixed; /* Stay in place */
-    z-index: 10; /* Sit on top */
-    left: 0;
-    top: 0;
-    background-color: black; /* Black fallback color */
-    background-color: black; /* Black w/opacity */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.8s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-  }
-  /* Position the content inside the overlay */
-  .overlay-content {
-    position: relative;
-    top: 25%; /* 25% from the top */
-    width: 100%; /* 100% width */
-    text-align: center; /* Centered text/links */
-    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-  }
-  
-  /* The navigation links inside the overlay */
-  .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 23px;
-    color: #96f1a2;
-    display: block; /* Display block instead of inline */
-    transition: 0.3s; /* Transition effects on hover (color) */
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .overlay a:hover, .overlay a:focus {
-    color: green;
-  }
-  
-  /* Position the close button (top right corner) */
-  .overlay .closebtn {
-    position: absolute;
-    top: 10px;
-    right:50px;
-    font-size: 50px;
-  }
-  
-  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-  @media screen and (max-height: 450px) {
-    /* .overlay a {font-size: 20px} */
-    .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-    }
-  }
-
- /* Menu NAVIGATION ON SMALL SCREEN  ENDS*/
-
-
-
-
-/* HEADER BEGINS */
-
-section{
-    margin-top: 70px;
-    text-align: center;
-    color: #96f1a2;
-}
-#profilePicture{
-    width: 300px;
-    border-radius: 50%;
-    transition: all 1s ease-in-out;
-    animation: sam 8s ease-in-out infinite;
-    box-shadow: 0px 2px 2px 2px #96f1a2;
-}
-.samuelnchege a{
-    text-decoration: none;
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 50;
+  left: 0;
+  top: 0;
+  background-color: rgba(2, 6, 23, 0.98);
+  overflow-x: hidden;
+  transition: height 0.35s ease;
 }
 
-@keyframes sam {
-    0% {
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
-    50% {
-        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-    }
-    100% {
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    } 
+.overlay-content {
+  position: relative;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
 }
 
-#typewriter{
-    font-size: 25px;
+.overlay a {
+  padding: 1rem 0;
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: #94a3b8;
+  display: block;
+  transition: color 0.2s ease;
 }
 
-svg{
-    /* font-size: 20px; */
-    fill: #96f1a2;
-    width: 30px;
-    margin: 6px;
-    cursor: pointer;
+.overlay a:hover,
+.overlay a:focus {
+  color: #34d399;
 }
+
+.closebtn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
 svg:hover{
     fill:green;
 }

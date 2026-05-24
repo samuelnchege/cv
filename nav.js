@@ -19,8 +19,11 @@ navLinks.forEach((link)=>{
     const section = document.querySelector(sectionId);
     section.scrollIntoView({behavior:'smooth'});
   });
-})
+});
 
-
-
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.AOS) {
+    AOS.init({ duration: 900, once: true, easing: 'ease-out-cubic' });
+  }
+});
  
