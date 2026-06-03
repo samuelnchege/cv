@@ -240,3 +240,28 @@ footer{
     color: green;
 }
 /* Footer Sectio Ends */
+
+/* Modal Styles */
+.modal {
+  display: flex;
+  transition: opacity 0.3s ease;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -63,3 +63,21 @@ function downloadPdf() {
   alert(`CV - Download successfull!
 Please view in downloads(Samuel Anyaja Nchege_cv.pdf)`)
 }
+
+// Resume Download Modal Functions
+function downloadResume() {
+  // Trigger the actual download
+  var link = document.createElement('a');
+  link.href = 'doc/Samuel_Anyaja_Nchege.pdf';
+  link.download = 'Samuel_Anyaja_Nchege.pdf';
+  link.click();
+  
+  // Show the modal
+  var modal = document.getElementById('resumeModal');
+  modal.classList.remove('hidden');
+}
+
+function closeResumeModal() {
+  var modal = document.getElementById('resumeModal');
+  modal.classList.add('hidden');
+}
