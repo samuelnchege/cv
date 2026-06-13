@@ -81,3 +81,20 @@ function closeResumeModal() {
   var modal = document.getElementById('resumeModal');
   modal.classList.add('hidden');
 }
+
+// Toggle Projects View
+function toggleProjects() {
+  const hiddenCards = document.querySelectorAll('.project-card-hidden');
+  const btn = document.getElementById('view-more-btn');
+  
+  hiddenCards.forEach(card => {
+    card.classList.toggle('hidden');
+  });
+  
+  // Change button text
+  if (btn.innerText === 'View More Projects') {
+    btn.innerText = 'Show Less';
+  } else {
+    btn.innerText = 'View More Projects';
+  }
+}
