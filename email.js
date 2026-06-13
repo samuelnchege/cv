@@ -18,12 +18,13 @@ const submitBtn = document.getElementById('submit-btn')
 const fnameInput = document.getElementById('fname');
 const lnameInput = document.getElementById('lname');
 const emailInput = document.getElementById('email');
+const emailSubject = document.getElementById('subject');
 const messageInput = document.getElementById('message');
 
 // Get needed data from EmailJS
 const publicKey = "zQ8Ivg2boi-EQjem-";
-const serviceID = "service_3yvwauj";
-const templateID = "template_0zgyr9o";
+const serviceID = "service_4u6ji3t";
+const templateID = "template_0zgyr9o"; 
 
 // Initialize EmailJS with Public Key
 emailjs.init(publicKey);
@@ -32,19 +33,30 @@ emailjs.init(publicKey);
 contactForm.addEventListener('submit', e =>{
   // prevent form default behaviour
   e.preventDefault();
-  // Changebutton text
-  submitBtn.innerText  = "Just A Moment...";
+  // Change button text and disable it
+  submitBtn.innerText = "Just a Moment...";
+  submitBtn.disabled = true;
+  
   // Get all input value fields
   const inputFields = {
     name: `${fnameInput.value} ${lnameInput.value}`,
     email: emailInput.value,
+    subject: emailSubject.value,
     message: messageInput.value
   }
+  
   // Send the email
   emailjs.send(serviceID, templateID, inputFields)
   .then(() => {
     // Change button Text
     submitBtn.innerText = "Message sent Successfully";
+    
+    // Reset button after 3 seconds
+    setTimeout(() => {
+      submitBtn.innerText = "Submit";
+      submitBtn.disabled = false;
+    }, 3000);
+    
     // Clear out all input fields
     fnameInput.value = "";
     lnameInput.value = "";
@@ -54,6 +66,12 @@ contactForm.addEventListener('submit', e =>{
     // console.log error
     console.log(error);
     // Change button Text
-    submitBtn.innerHTML = "Something went wrong";
+    submitBtn.innerText = "Something went wrong";
+    submitBtn.disabled = false;
+    
+    // Reset button after 3 seconds
+    setTimeout(() => {
+      submitBtn.innerText = "Submit";
+    }, 3000);
   });
 });
